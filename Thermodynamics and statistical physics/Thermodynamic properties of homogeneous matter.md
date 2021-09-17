@@ -128,6 +128,60 @@
 
 $C_V = T \left( \frac{\partial S}{\partial T} \right)_V， C_p = T \left( \frac{\partial S}{\partial T} \right)_p$
 
+---
+## 2.3 气体的节流过程和绝热膨胀过程
+---
+* **节流过程**
+  ![](\Pic/节流过程.jpg)
+  绝热的不导热材料包着系统，多孔塞两边各维持着较高的压强p1和较低的压强p2，于是气体从高压不断流向低压一端，并且达到**定常状态**，这个过程就叫做节流过程.测量表明，在节流过程前后，气体的温度发生了变化，这个效应称为**焦耳——汤姆孙效应**，简称**焦——汤效应**.
+  * **热力学过程分析**
+  通过多孔塞前，热力学参量为(p1,V1,U1);
+  通过多孔塞后，热力学参量为(p2,V2,U2);
+  在节流过程中外界对系统做功是：p1V1-p2V2,因为材料不导热，系统是绝热的，基于热力学第一定律可知：U2-U1 = p1V1 - p2V2
+  即：
+  $$\begin{aligned} H_1 = H_2 \tag{2.3.1} \end{aligned}$$
+  ==这表明在节流过程前后，气体的焓不变==
+  定义：
+  $$\begin{aligned} \mu = (\frac{\partial T}{\partial p})_H \end{aligned}  \tag{2.3.2}$$
+  表示在焓不变的条件下气体温度随压强的变化率，称为**焦汤系数**，取T、p为状态参量，状态函数焓可表示为H = H(T,p).偏导数之间满足下列关系：
+  $$\begin{aligned}
+  (\frac{\partial T}{\partial p})_H(\frac{\partial p}{\partial H})_T(\frac{\partial H}{\partial T})_p = -1
+  \end{aligned} \tag{2.3.3}$$
+  进一步可以得到：
+    $$\begin{aligned} \mu = (\frac{\partial T}{\partial p})_H \end{aligned} = -\frac{(\frac{\partial H}{\partial p})_T}{(\frac{\partial H}{\partial T})_p}  $$
+  并由前面可知有：
+  $$\begin{aligned} C_p = T(\frac{\partial S}{\partial T})_p = (\frac{\partial H}{\partial T})_p \end{aligned}$$
+  $$\begin{aligned}(\frac{\partial H}{\partial p})_T = T(\frac{\partial S}{\partial p})_T + V\end{aligned}$$
+  根据麦氏关系又有：
+  $$\begin{aligned} (\frac{\partial S}{\partial p})_T = -(\frac{\partial V}{\partial T})_p \end{aligned}$$
+  再进一步可以得到：
+    $$\begin{aligned} \mu = -\frac{(\frac{\partial H}{\partial p})_T}{(\frac{\partial H}{\partial T})_p}
+   \end{aligned} = \frac{1}{C_p}[T(\frac{\partial V}{\partial T})_p -V] \tag{2.3.4}$$
+   或者
+   $$\begin{aligned}
+    \mu = \frac{V}{C_p}(T\alpha -1) \tag{2.3.5}
+   \end{aligned}$$
+  * 对于理想气体而言，其体胀系数$\alpha = \frac{1}{T}$,因此焦汤系数为零，因此==理想气体在节流过程前后温度不变==,此外==节流过程是不可逆过程==
+  对于实际气体，$\mu$取不同情况时的温度变化：
+     1. $\mu = 0，\alpha T=1$,节流过程前后温度不变(理想气体)( \alpha T=1 称为反转曲线)
+     2. $\mu < 0，\alpha T=1$,节流过程前后温度升高(制温区)
+     3. $\mu > 0，\alpha T=1$,节流过程前后温度降低(制冷区)
+* 绝热膨胀
+  我们将过程近似地看作是准静态的，在准静态绝热过程中气体的熵保持不变，由：
+  $$\begin{aligned}
+   \mathrm{dS} = (\frac{\partial S}{\partial T})_p\mathrm{dp} + (\frac{\partial S}{\partial p})_T\mathrm{dT} = 0
+  \end{aligned}$$
+  可以得到：
+  $$\begin{aligned}
+   \mu = (\frac{\partial T}{\partial p})_S = -\frac{(\frac{\partial S}{\partial p})_T}{(\frac{\partial S}{\partial T})_p} = \frac{T}{C_p}(\frac{\partial V}{\partial T})_p 
+   = \frac{VT\alpha}{C_p} \tag{2.3.8}
+  \end{aligned}$$
+  可以看出：
+  在绝热状态下，随着体积膨胀压强降低，气体的温度必然下降，从能量转化的角度看，气体在绝热膨胀过程中减少其内能而对外做功，膨胀后的气体分子间的平均距离增大，吸引力减弱而使得分子间的相互作用能增大.内能减少而相互作用能增大，分子的平均动能必然减少，因而气体的温度下降.气体的绝热膨胀过程也被用来使气体降温并液化
+---
+## 2.4 基本热力学函数的确定
+---
+
 ### 总结
 ----
 ##### （一）内能
@@ -210,60 +264,13 @@ $\left( \frac{\partial S}{\partial p} \right)_T = - \left( \frac{\partial V}{\pa
 
 ------
 
-
 ---
-## 2.3 气体的节流过程和绝热膨胀过程
+## 2.5 特性函数
 ---
-* **节流过程**
-  ![](\Pic/节流过程.jpg)
-  绝热的不导热材料包着系统，多孔塞两边各维持着较高的压强p1和较低的压强p2，于是气体从高压不断流向低压一端，并且达到**定常状态**，这个过程就叫做节流过程.测量表明，在节流过程前后，气体的温度发生了变化，这个效应称为**焦耳——汤姆孙效应**，简称**焦——汤效应**.
-  * **热力学过程分析**
-  通过多孔塞前，热力学参量为(p1,V1,U1);
-  通过多孔塞后，热力学参量为(p2,V2,U2);
-  在节流过程中外界对系统做功是：p1V1-p2V2,因为材料不导热，系统是绝热的，基于热力学第一定律可知：U2-U1 = p1V1 - p2V2
-  即：
-  $$\begin{aligned} H_1 = H_2 \tag{2.3.1} \end{aligned}$$
-  ==这表明在节流过程前后，气体的焓不变==
-  定义：
-  $$\begin{aligned} \mu = (\frac{\partial T}{\partial p})_H \end{aligned}  \tag{2.3.2}$$
-  表示在焓不变的条件下气体温度随压强的变化率，称为**焦汤系数**，取T、p为状态参量，状态函数焓可表示为H = H(T,p).偏导数之间满足下列关系：
-  $$\begin{aligned}
-  (\frac{\partial T}{\partial p})_H(\frac{\partial p}{\partial H})_T(\frac{\partial H}{\partial T})_p = -1
-  \end{aligned} \tag{2.3.3}$$
-  进一步可以得到：
-    $$\begin{aligned} \mu = (\frac{\partial T}{\partial p})_H \end{aligned} = -\frac{(\frac{\partial H}{\partial p})_T}{(\frac{\partial H}{\partial T})_p}  $$
-  并由前面可知有：
-  $$\begin{aligned} C_p = T(\frac{\partial S}{\partial T})_p = (\frac{\partial H}{\partial T})_p \end{aligned}$$
-  $$\begin{aligned}(\frac{\partial H}{\partial p})_T = T(\frac{\partial S}{\partial p})_T + V\end{aligned}$$
-  根据麦氏关系又有：
-  $$\begin{aligned} (\frac{\partial S}{\partial p})_T = -(\frac{\partial V}{\partial T})_p \end{aligned}$$
-  再进一步可以得到：
-    $$\begin{aligned} \mu = -\frac{(\frac{\partial H}{\partial p})_T}{(\frac{\partial H}{\partial T})_p}
-   \end{aligned} = \frac{1}{C_p}[T(\frac{\partial V}{\partial T})_p -V] \tag{2.3.4}$$
-   或者
-   $$\begin{aligned}
-    \mu = \frac{V}{C_p}(T\alpha -1) \tag{2.3.5}
-   \end{aligned}$$
-  * 对于理想气体而言，其体胀系数$\alpha = \frac{1}{T}$,因此焦汤系数为零，因此==理想气体在节流过程前后温度不变==,此外==节流过程是不可逆过程==
-  对于实际气体，$\mu$取不同情况时的温度变化：
-     1. $\mu = 0，\alpha T=1$,节流过程前后温度不变(理想气体)( \alpha T=1 称为反转曲线)
-     2. $\mu < 0，\alpha T=1$,节流过程前后温度升高(制温区)
-     3. $\mu > 0，\alpha T=1$,节流过程前后温度降低(制冷区)
-* 绝热膨胀
-  我们将过程近似地看作是准静态的，在准静态绝热过程中气体的熵保持不变，由：
-  $$\begin{aligned}
-   \mathrm{dS} = (\frac{\partial S}{\partial T})_p\mathrm{dp} + (\frac{\partial S}{\partial p})_T\mathrm{dT} = 0
-  \end{aligned}$$
-  可以得到：
-  $$\begin{aligned}
-   \mu = (\frac{\partial T}{\partial p})_S = -\frac{(\frac{\partial S}{\partial p})_T}{(\frac{\partial S}{\partial T})_p} = \frac{T}{C_p}(\frac{\partial V}{\partial T})_p 
-   = \frac{VT\alpha}{C_p} \tag{2.3.8}
-  \end{aligned}$$
-  可以看出：
-  在绝热状态下，随着体积膨胀压强降低，气体的温度必然下降，从能量转化的角度看，气体在绝热膨胀过程中减少其内能而对外做功，膨胀后的气体分子间的平均距离增大，吸引力减弱而使得分子间的相互作用能增大.内能减少而相互作用能增大，分子的平均动能必然减少，因而气体的温度下降.气体的绝热膨胀过程也被用来使气体降温并液化
----
-### 2.4 基本热力学函数的确定
----
+* **特性函数**
+  马修在1869年证明，如果是适当地选择独立变量(自然变量)，只要知道一个热力学函数，就可以通过求偏导数求得均匀系统的全部热力学函数，从而把均匀系统的性质完全确定下来.这个热力学函数即称作**特性函数**，表明它是表征均匀系统的特性的.
+* **吉布斯-亥姆霍兹方程**
+  
 
 
 
