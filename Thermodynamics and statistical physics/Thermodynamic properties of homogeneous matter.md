@@ -341,7 +341,7 @@ $\left( \frac{\partial S}{\partial p} \right)_T = - \left( \frac{\partial V}{\pa
     $$\begin{aligned} p = \frac{1}{3} u \end{aligned}\tag{2.6.1}$$
     论证如下：
      * 在黑体上取面元$\mathrm{d}s$，四周的辐射可以看成是来自$\mathrm{d}s$所在点为圆心，以任意可能值R为半径的半球面辐射到$\mathrm{d}s$上的，下面计算由半球面辐射到面元$\mathrm{d}s$上的辐射压力：
-     ![辐射模型](/)
+     ![辐射模型](\Pic/球面模型.png)
      在球面上取薄圆环$\mathrm{d}\varphi$,面元$\mathrm{d}s$可以表示为：
      $$\begin{aligned}\mathrm{d}\varphi = 2\pi R\sin\theta\cdot R\mathrm{d}\theta\end{aligned}\tag{(1)}$$
      若能量通过小面元$\mathrm{d}\varphi$辐射到$\mathrm{d}s$,那么,$\mathrm{d}s$所受到的总的辐射压力为：
@@ -417,8 +417,113 @@ $\left( \frac{\partial S}{\partial p} \right)_T = - \left( \frac{\partial V}{\pa
      \end{aligned}\tag{2.6.6}$$
      此后我们会说明平衡辐射下吉布斯函数为零是**平衡辐射光子数不守恒**的结果     
 * 辐射通量密度$J_u$与辐射内能密度u的关系 
-      
-
+   *  考虑在前述空间模型中开一足够小的小孔，使得空间内辐射场并未被显著破坏.以$J_u$表示单位时间内通过小孔的单位面积向一侧辐射的辐射能量，称为**辐射通量密度**.   
+   * 辐射通量密度和辐射内能密度满足如下关系：
+     $$\begin{aligned}
+      J_u = \frac{1}{4}cu
+     \end{aligned}\tag{2.6.7}$$
+   * 简易证明：
+     考虑在单位时间内通过面积元$\mathrm{d}$A向一侧辐射的能量，若投射到面积元$\mathrm{d}A$上的是一束传播方向与面积元的法线平行的平面电磁波，则单位时间内通过面积元向一侧辐射的能量为$cu\mathrm{d}A$.各向同性的均匀辐射场内包含各种传播方向，因此传播方向在$\mathrm{d}\Omega$立体角的辐射内能密度将为$\frac{cu\mathrm{d}\Omega}{4\pi}$,单位时间内，传播方向在$\mathrm{d}\Omega$立体角内，通过$\mathrm{d}A$向一侧辐射的能量为$\frac{cu\mathrm{d}\Omega}{4\pi}\cos\theta\mathrm{d}A$,其中$\theta$是传播方向与面元法线方向的夹角.
+     对所有传播方向进行积分就可以得到单位时间内通过面元向一侧辐射的总辐射能量：
+     $$\begin{aligned}
+      J_u\mathrm{d}A = \frac{cu\mathrm{d}A}{4\pi}\int{\cos\theta\mathrm{d}\Omega}
+      \\ = \frac{cu\mathrm{d}A}{4\pi}\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta\mathrm{d}\theta\int_0^{2\pi}\mathrm{d}\varphi
+      \\ = \frac{1}{4}cu\mathrm{d}A
+      \end{aligned}$$
+     于是：
+     $$\begin{aligned}J_u = \frac{1}{4}cu = \frac{1}{4}caT^4 = \sigma T^4\end{aligned}\tag{2.6.8}$$
+     式$(2.6.8)$被称为**斯特藩-玻尔兹曼定律**.该定律是1879年斯特藩在观测中发现，并由玻尔兹曼在1884年用热力学理论导出.$\sigma$称为**斯特藩常量**，他的数值为：
+     $$\sigma = 5.669\times10^{-8} W\cdot m^{-2}\cdot K^{-4}$$ 
+* 基尔霍夫辐射定律
+   * 由于辐射达到平衡后，其内能密度按频率的分布只是温度的函数，因此，物质对各种频率电磁波的发射和吸收特性必然有某种联系.某一频率发射较强，则其吸收也必然较强.
+   * 单位时间内投射到物体的单位面积上、园频率在$\mathrm{d}\omega$内的辐射能量为$\frac{c}{4}u(\omega)\mathrm{d}\omega$.以$\alpha_{\omega}$表示其中被物体吸收的百分比，称为**物体对频率在$\omega$范围附近的辐射能量的吸收因数**.因此被物体吸收的能量为$\alpha_{\omega}\frac{c}{4}u(\omega)\mathrm{d}\omega$.我们用$e_{\omega}\mathrm{d}\omega$表示单位时间内从物体的单位面积发射、频率在$\mathrm{d}\omega$范围内的辐射能量.$e_{\omega}$称为**物体对频率在$\omega$范围附近的电磁波的面辐射密度**.注意$e_{\omega}$与$\alpha_{\omega}$表征物体的固有属性，与辐射场是否达到平衡无关.
+   * **基尔霍夫辐射定律**
+   $$\begin{aligned}\frac{e_{\omega}}{\alpha_{\omega}} = \frac{c}{4}u(\omega,T)\end{aligned}\tag{2.6.9}$$
+   基尔霍夫辐射定律指出**物体在任何频率处的免辐射强度与吸收因数之比对所有物体都相同，是频率和温度的普适函数**.吸收因数等于1的物体被称为绝对黑体.绝对黑体是最好的吸收体，也是最好的辐射体，此时绝对黑体的面辐射强度与辐射通量密度完全相等，因此，**平衡辐射也叫做黑体辐射**
+***
+## §2.7 磁介质的热力学
+* 在1.4中我们给出了磁介质中磁场强度和磁感应强度发生变化时外界所做功的推导：
+  >长度为L截面积为A的磁介质上绕有N匝线圈(忽略线圈电阻).线圈中接入电流，通过改变流入的电流以改变磁介质中的磁场时，线圈中将产生反电动势，此时，外界需要克服反电动势做功，在$\mathrm{d}$t时间内外界做的功为:
+        $$\begin{aligned} \mathrm{d}W = UI\mathrm{d}t\end{aligned} $$
+        U表示反电动势大小，I为流入电流强度.设磁介质中磁感应强度为B，由法拉第电磁感应定律:
+        $$\begin{aligned}U = N\frac{\mathrm{d}}{\mathrm{d}t}(AB) \end{aligned} $$
+        由安培环路定理$\int H \cdot \mathrm{d}l = \sum i$得到HL=NI,从而得到:
+        $$\begin{aligned} \mathrm{d}W = (NA\frac{\mathrm{d}B}{\mathrm{d}t})(\frac{L}{N}H)\mathrm{d}t = ALH\mathrm{d}B \end{aligned} $$
+        即$\mathrm{d}W = VH\mathrm{d}B$,注意到B=$\mu_0$(H+M),可以得到：
+        $$\begin{aligned} \mathrm{d}W = V\mathrm{d}(\frac{\mu_0H^2}{2})+\mu_0VH\mathrm{d}M \tag{1.4.8}\end{aligned} $$
+        上式中$\mu_0$是真空磁导率，式$(1.4.8)$表明外界克服反电动势做功可以分为两部分，第一部分是对激发磁场做功，第二部分是对极化磁场做功
+  
+  $$\begin{aligned}
+   \mathrm{d}W = V\mathrm{d}(\frac{\mu_0H^2}{2})+\mu_0VH\mathrm{d}M
+  \end{aligned}\tag{2.7.1}$$
+  上式右侧第一项是由激发磁场做的功，第二项是使介质极化做的功.当热力学系统只包括磁介质而没有磁场时，功的表达式只有右侧第二项.
+  这一项也可以表示为：
+  $$\begin{aligned}
+   \mathrm{d}W = \mu_0 H\mathrm{d}m
+  \end{aligned}\tag{2.7.2}$$
+  上式中m = MV是介质的总磁矩.并且假设介质是均匀磁化的.
+   1. 当我们忽略磁介质体积的变化时，磁介质的热力学基本方程为：
+    $$\begin{aligned}
+    \mathrm{d}U = T\mathrm{d}S + \mu_0H\mathrm{d}m
+    \end{aligned}\tag{2.7.3}$$
+    根据数学推演代换：p $\rightarrow$ -$\mu_0H$;V $\rightarrow$ m   $$\tag{2.7.4}$$
+    磁介质的吉布斯函数G为：
+    $$\begin{aligned}
+       G = F + pV = U - TS + pV 
+       \\= U - TS -\mu_0Hm
+    \end{aligned}\tag{2.7.5}$$
+    吉布斯函数G的全微分方程为：
+    $$\begin{aligned}
+     \mathrm{d}G = \mathrm{d}U -T\mathrm{d}S - S\mathrm{d}T -\mu_0 H\mathrm{d}m - \mu_0 m\mathrm{d}H
+     \\ = -S\mathrm{d}T - \mu_0 m\mathrm{d}H
+    \end{aligned}\tag{2.7.6}$$
+    由全微分存在条件可以得到(即混合偏导数相等)：
+    $$\begin{aligned}
+     (\frac{\partial S}{\partial H})_T = (\frac{\partial \mu_0 m}{\partial T})_H
+    \end{aligned}\tag{2.7.7}$$
+    上式是磁介质的一个麦氏关系，由于存在函数关系S=S(T,H),故有：
+    $$\begin{aligned}
+     (\frac{\partial S}{\partial H})_T\cdot(\frac{\partial H}{\partial T})_S\cdot(\frac{\partial T}{\partial S})_H = -1
+    \end{aligned}\tag{2.7.8}$$
+    或者表述为：
+    $$\begin{aligned}
+     (\frac{\partial T}{\partial H})_S = -(\frac{\partial S}{\partial H})_T\cdot(\frac{\partial T}{\partial S})_H
+    \end{aligned}\tag{2.7.8}$$
+    在磁场不变时，磁介质的热容$C_H$为：
+    $$\begin{aligned}
+     C_H = \frac{\mathrm{d}Q}{\mathrm{d}T} = T(\frac{\partial S}{\partial T})_H
+    \end{aligned}\tag{2.7.9}$$
+    于是可以得到：
+    $$\begin{aligned}
+     (\frac{\partial T}{\partial H})_S = -\frac{\mu_0 T}{C_H}(\frac{\partial m}{\partial T})_H
+    \end{aligned}\tag{2.7.10}$$
+    若磁介质遵从居里定律：
+    $$\begin{aligned}
+     m = \frac{CV}{T}H
+    \end{aligned}\tag{2.7.11}$$
+    于是可以得到：
+    $$\begin{aligned}
+     (\frac{\partial T}{\partial H})_S = \frac{CV}{C_H T}\mu_0 H
+    \end{aligned}\tag{2.7.12}$$
+    上式表明：**在绝热条件下减小磁场，磁介质的温度将降低**.这个效应称为**绝热去磁制冷**.这种原理是获得1K一下低温的有效方法.
+   2. 若考虑磁介质体积的变化，磁介质的热力学方程变更为：
+      热力学基本方程：
+      $$\begin{aligned}
+       \mathrm{d}U = T\mathrm{d}S - p\mathrm{d}V + \mu_0 H\mathrm{d}m
+      \end{aligned}\tag{2.7.13}$$
+      吉布斯函数为：
+      $$\begin{aligned}
+       G = U - TS + pV - \mu_0 Hm
+      \end{aligned}\tag{2.7.14}$$
+      吉布斯函数全微分为：
+      $$\begin{aligned}
+       \mathrm{d}G = -S\mathrm{d}T - \mu_0 m\mathrm{d}H + V\mathrm{d}p
+      \end{aligned}\tag{2.7.15}$$
+      由完整微分条件可以得到：
+      $$\begin{aligned}
+       (\frac{\partial V}{\partial H})_{T、p} = -\mu_0 (\frac{\partial m}{\partial p})_{T,H}
+      \end{aligned}\tag{2.7.16}$$
+      也是磁介质的一个麦氏关系.上式左侧表明在温度和压强恒定时体积随磁场强度的变化率，它描述的是**磁致伸缩效应**；右侧表明在温度和磁场强度保持不变的情况下介质磁矩随压强的变化率，它描述的是**压磁效应**
   
    
 
