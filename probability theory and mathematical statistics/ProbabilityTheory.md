@@ -1,10 +1,12 @@
 ---
 title: ProbabilityTheory
-date: 2021-09-16 22:23:37
-tags: 数学
-categories: 笔记
+date: 2021-10-08 22:23:37
+math: true
+tags: ProbabilityTheory
+categories: Probability Theory and Mathematical Statistics
 ---
-
+   本章将以NKU的概统教材为顺序，梳理NKU版本教材下概统的知识点，知识点更新将随课程进度同步
+***
 [toc]
 # 概率论与数理统计
 
@@ -91,3 +93,85 @@ $$
 
 ## 随机变量及其分布
 
+### 随机变量
+  * 设随机试验的样本空间S = {e}，X=X(e)是定义在样本空间S上的实值单值函数，则称X=X(e)为**随机变量**
+  * 随机变量分为
+    1. 离散型随机变量
+    2. 非离散型随机变量，而非离散型随机变量又包括
+       * 连续型随机变量
+       * 其他类型                                                                                                               
+### 离散型随机变量的分布律
+  * $\color{yellow}{离散型随机变量的定义}$
+    有些随机变量，它全部可能的取值是有限个或可列无限多个，这样的随机变量称为**离散型随机变量**
+  * $\color{yellow}{离散型随机变量的表示}$
+    $$\begin{aligned}
+     P(X = x_k) = p_k，k = 1,2,3\cdots
+    \end{aligned}$$ 
+    上式称为离散型随机变量的分布律
+    * $p_k$满足如下两个条件
+      1. $0 \leq p_k$
+      2. $\sum_{i=1}^{\infty}p_k = 1$
+  * $\color{yellow}{离散型随机变量的分布律}$
+    * $\color{yellow}{几何分布}$
+      几何分布又称为**首次成功模型**
+      $$\begin{aligned}
+       P(X=k) = p(1-p)^{k-1} \quad k =1,2,3\cdots
+      \end{aligned}$$
+    * $\color{yellow}{(0-1)分布}$
+      若随机变量的X值只能取0或1两个值，那么随机变量的分布律为
+      $$\begin{aligned}
+       P(X = k) = p^k(1-p)^{1-k} \quad k=0,1 \quad (0<p<1)
+      \end{aligned}$$
+    * $\color{yellow}{伯努利试验与二项分布}$
+      若试验E只有两个结果$A,\bar{A}$，则称试验E为**伯努利试验**，将E独立重复地进行n次，则称这一串重复的独立试验为n重伯努利试验
+      二项分布的分布律为
+      $$\begin{aligned}
+       P(X = k) = C_n^kp^{k}(1-p)^{1-k}=C_n^kp^{k}q^{1-k} \quad (q=1-p)
+      \end{aligned}$$
+      等式右侧恰好是二项式$(p+q)^n$的展开式中出现$p^k$的那一项，我们称**随机变量X服从参数为n,p的二项分布**，并记为X~$b(n,p)$
+      当n=1时二项分布就退化为(0-1)分布
+    * $\color{yellow}{泊松分布与泊松定理}$
+      设随机变量X所有可能的取值为$0,1,2\cdots$，而各个取值的概率为
+      $$\begin{aligned}
+       P(X= k) = \frac{\lambda^k e^{-\lambda}}{k!} \quad (k=1,2\cdots)
+      \end{aligned}$$ 
+      其中$\lambda$是大于零的常数，则称**随机变量X服从参数为$\lambda$的泊松分布**，记为X~$\pi(\lambda)$
+      由概率的公理化定义可知
+      $$\begin{aligned}\sum_{k=1}^{\infty}P(X=k) = 1\end{aligned}$$
+      因此
+      $$\begin{aligned}
+       \sum_{k=1}^{\infty}P(X = k) = \sum_{k=1}^{\infty}\frac{\lambda^k e^{-\lambda}}{k!} = e^{-\lambda}\sum_{k=1}^{\infty}\frac{\lambda^{k}}{k!} = 1 \Rightarrow  \sum_{k=1}^{\infty}\frac{\lambda^{k}}{k!} = e^{\lambda}
+      \end{aligned}$$
+      **泊松定理** 设$\lambda$为大于零的常数，n是任意正整数，设 $np_n = \lambda$，则对任一固定的非负整数k，有
+      $$\begin{aligned}
+       \lim_{n\to \infty}C_n^k p_n^k (1-p_n)^{1-k} = \frac{\lambda^k e^{-\lambda}}{k!}
+      \end{aligned}$$
+      这意味着当n很大而概率p很小时，可以用泊松分布近似计算二项分布
+### 随机变量的分布函数
+
+  * $\color{yellow}{随机变量的分布函数定义}$：设X是一个随机变量，x是任意函数，函数
+    $$\begin{aligned}
+     F(x) = P(X\leq x) \quad -\infin <x< \infin
+    \end{aligned}$$
+    称为X的**分布函数**
+  * $\color{yellow}{重要公式}$
+    $$\begin{aligned}
+     P(x_1<X \leq x_2) = F(x_2) - F(x_1)
+    \end{aligned}$$
+    $$\begin{aligned}
+     P(X>a) = 1 - F(a)
+    \end{aligned}$$
+    $$\begin{aligned}
+     P(x_1<X < x_2) = F(x_2) - F(x_1) - P(X=x_2)
+    \end{aligned}$$
+* $\color{yellow}{分布函数的基本性质}$
+  1. $F(x)$是一个不减函数(这是因为$F(x)$函数之间的运算表述的是在某一段区间内的概率，而概率具有非负性)
+     $$\begin{aligned}
+      F(x_2) - F(x_1) = P(x_1<X\leq x_2)≥0
+     \end{aligned}$$
+  2. $0\leq F(x)\leq 1$，且
+     $$\begin{aligned}
+      F(-\infin) = \lim_{x\to -\infty}F(x) = 0，F(\infty) = \lim_{x\to \infty}F(x) = 1
+     \end{aligned}$$
+  3. $F(x+0) = F(x)$，即F(x)是右连续的
+  $\color{red}{具备上述三条性质的函数F(x)必定是某个随机变量的分布函数，上述三个条件是判断一个函数是否是分布函数的重要判据}$

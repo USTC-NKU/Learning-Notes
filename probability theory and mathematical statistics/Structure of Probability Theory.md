@@ -2,7 +2,7 @@
 title: Structure of Probability Theory
 math: true
 tags: Structure of Probability Theory
-categories: Probability Theory 
+categories: Probability Theory and Mathematical Statistics
 ---
 [toc]
 概率论，是研究随机现象数量规律的数学分支.本文旨在构建概率论这门学科在本科阶段的基本框架. 
