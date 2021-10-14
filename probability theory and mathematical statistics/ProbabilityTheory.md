@@ -175,3 +175,66 @@ $$
      \end{aligned}$$
   3. $F(x+0) = F(x)$，即F(x)是右连续的
   $\color{red}{具备上述三条性质的函数F(x)必定是某个随机变量的分布函数，上述三个条件是判断一个函数是否是分布函数的重要判据}$
+
+
+### 连续型随机变量及其概率密度
+ * 如果对于随机变量X的分布函数F(x)，存在非负可积函数f(x)，使对于任意实数x，有
+   $$\begin{aligned}
+    F(x) = \int_{-\infty}^xf(t)dt
+   \end{aligned}$$
+则X称为**连续型随机变量**，f(x)称为X的**概率密度函数**，简称**概率密度**
+ * 概率密度函数f(x)具有以下性质
+  1. f(x)≥0
+  2. $\int_{-\infty}^{\infty}f(x)dx=1$
+  3. 对于任意实数$x_1,x_2(x_1\leq x_2)$
+     $$\begin{aligned}
+      P(x_1< X\leq x_2) = F(x_2)-F(x_1)=\int_{x_1}^{x_2}f(x)dx
+     \end{aligned}$$
+  4. 若f(x)在点x处连续，则有$F'(x)=f(x)$
+ * 需要指出的是，对于连续型随机变量，它取任一指定实数值a的概率均为零，即$P(X=a)\equiv 0$，**但这并不意味着事件{X=a}为不可能事件**，也就是说，不可能事件的概率一定为零，但概率为零不能说明事件是不可能事件    
+ * 几种连续型随机变量的分布类型
+   * **均匀分布**
+     若连续型随机变量X具有概率密度
+     $$f(x)=\begin{cases}
+      \frac{1}{b-a}\quad,a<x<b \\\\
+      0 \quad ,其他
+     \end{cases}$$
+     则称X在区间$(a,b)$上服从**均匀分布**，记为X~U$(a,b)$
+     均匀分布的分布函数为
+     $$F(x)=\begin{cases}
+      0 \quad, x<a \\\\
+      \frac{x-a}{b-a}  \quad,a\leq x<b \\\\
+      1 \quad, x\geq b
+     \end{cases}$$
+   * **指数分布**
+     若连续性随机变量X的概率密度为
+     $$f(x)=\begin{cases}
+      \frac{1}{\theta}e^{-\frac{x}{\theta}}\quad ,x>0 \\\\
+      0 \quad ,其他
+     \end{cases}$$
+     其中$\theta>0$为常数，则称X服从参数为$\theta$的**指数分布**
+     指数分布的分布函数为
+     $$F(x)=\begin{cases}
+      1 - e^{-\frac{x}{\theta}} \quad ,x>0 \\\\
+      0 \quad,其他
+     \end{cases}$$
+     指数分布有一个重要的性质称为**无记忆性**
+     $$\begin{aligned}
+      P(X>s+t|X>s) = P(X>t)
+     \end{aligned}$$
+   * **正态分布**
+     若连续型随机变量X的概率密度为
+     $$\begin{aligned}
+      f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \quad ,-\infty<x<\infty
+     \end{aligned}$$
+     其中$\mu,\sigma(\sigma>0)$为常数，则称X服从参数为$\mu,\sigma$的**正态分布**或**高斯分布**，记为X~N$(\mu,\sigma^2)$ 
+     正态分布曲线关于直线$x=\mu$对称，并在$x=\mu$取得最大值
+     $\mu=0,\sigma=1$时的正态分布曲线称为**标准正态分布**，其概率密度和分布函数分别用$\varphi(x),\Phi(x)$表示
+     $$\begin{cases}
+      \varphi(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} \\\\
+      \Phi(-x) = 1 -\Phi(x) 
+     \end{cases}$$
+     对于一般地正态分布X~N $(\mu,\sigma^2)$，我们可以通过线性变换将之化为标准正态分布X~N (0,1)
+     * **线性变换转换引理**
+       若X~N $(\mu,\sigma^2)$,则取Z=$\frac{x-\mu}{\sigma}$ 就可将之转化为X~N (0,1)
+
