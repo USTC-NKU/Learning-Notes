@@ -288,7 +288,7 @@ categories: Physics
 ***
 # 光的干涉
 ***
-* 杨氏双缝干涉
+## 杨氏双缝干涉
    ![杨氏双缝干涉实验](\pic/杨氏双缝.jpg)
    根据光的叠加原理，干涉光在某一点的光强为
    $$\begin{aligned}
@@ -358,3 +358,272 @@ categories: Physics
    \Delta y =  \frac{2\pi}{k(\cos\beta_1 - \cos\beta_2)} = \frac{\lambda}{\cos\beta_1 - \cos\beta_2}
    \end{cases}
   \end{aligned}$$
+
+## 洛埃镜
+  ![洛埃镜](\pic/洛埃镜.png)
+  * 如上图所示，光源入射到镜面上后等效形成一个虚光源，实光源与虚光源是一对相干光源
+  * 洛埃镜下的干涉可用杨氏双缝干涉类比，两个光源之间的距离等价为狭缝距离，光源到接受屏幕的垂直距离就是D
+  * 需要注意的是，入射光经过洛埃镜发射后会产生相位突变，发生半波损失，因此，光程差中除了包含两光源自身的光程差以外，还需要添加半个波长
+
+## 空间相干性
+  ![空间相干性](\pic/空间相干性.png)
+  * 当我们把杨氏实验中的点光源换成线光源后，这里的线光源彼此之间是不相干的，在经过狭缝后会各自产生一套干涉条纹，频幕上的每一处都是各个干涉图样的叠加
+  * 上图中OM,ON分别是线光源的顶端和底端点光源经过狭缝干涉后的中央亮纹，在线光源宽度b不是很大的情况下，二者大致重合与中央对称点Q，但当距离逐渐增大时，二者将逐渐分离，这将使得屏幕图样的反衬度降低.
+  * 当线光源的宽度加宽到两端端点点光源经过狭缝后各自分别干涉形成的一级暗条纹正好落在中央对称点O时，干涉图样已经完全不能分辨，屏幕上总光强均匀分布，此时的线光源宽度就是空间干涉极限
+  * 当线光源宽度b达到空间干涉极限时，有
+    * $$\begin{aligned}
+      r_2-r_1=\frac{\lambda}{2}
+      \end{aligned}$$
+    * $$\begin{aligned}
+      r^2_2=B^2+(\frac{d+b}{2})^2     
+      \end{aligned}$$  
+    * $$\begin{aligned}
+      r^2_1=B^2+(\frac{d-b}{2})^2
+      \end{aligned}$$  
+    * $$\begin{aligned}
+      r_2-r_1≈\frac{db}{2B}=\frac{\lambda}{2}
+      \end{aligned}$$  
+    * $$\begin{aligned}
+      b=\frac{B\lambda}{d}
+      \end{aligned}$$  
+  * 因此我们得到了空间相干的极限线宽度b，这表明只有当线光源的宽度小于该极限宽度时才能够获得相干光，换言之，只有当同一波阵面上的两点距离小于该极限宽度时，从这两点发出的次波才是相干的，这一性质称为**空间相干性**
+* 薄膜干涉
+  * 等厚干涉
+  干涉图样中同一干涉级次条纹对应于薄膜上厚度相同点的连线，这样的干涉条纹称为**等厚干涉条纹**
+  ![等厚干涉](\pic/等厚干涉.png)
+  等厚干涉中的光程差可以表示为
+  $$\begin{aligned}
+   \delta = n_2(AB+BC)-n_1DC+\frac{\lambda}{2}
+  \end{aligned}$$ 
+  $$\begin{aligned}
+   \delta=2n_2 d\cos\gamma+\frac{\lambda}{2}
+  \end{aligned}$$
+  半波长加载项是因为不论折射率大小情况如何，必定会存在半波损失，因此光程差中需要添加半个波长
+
+    * 劈尖干涉   
+    ![劈尖干涉](\pic/劈尖干涉.png)
+    两条相邻的明条纹或暗条纹对应的空气层厚度都相等,两条相邻的明条纹或暗条纹之间的距离为a
+    $$\begin{aligned}
+     d_{k+1}-d_{k}=\frac{\lambda}{2}
+    \end{aligned}$$
+    $$\begin{aligned}
+     a\sin\theta=\frac{\lambda}{2}
+    \end{aligned}$$
+    因此可见劈尖的角度越小，干涉条纹间距越稀疏，越容易分辨,且最开始的条纹是暗纹
+    * 牛顿环
+    ![牛顿环](\pic/牛顿环.png)
+    半径为r的环形条纹下对应的空气层d，由图可知
+    $$\begin{aligned}
+     R^2=r^2+(R-d)^2
+    \end{aligned}$$
+    $$\begin{aligned}
+     d=\frac{r^2}{2R}
+    \end{aligned}$$
+    $$\begin{aligned}
+     \delta = 2d+\frac{\lambda}{2}
+    \end{aligned}$$
+    由此，牛顿环的中央显然是暗纹
+  * 等倾干涉
+    干涉图样中同一干涉条纹是来自膜面的等倾角光线经过透镜聚焦后的轨迹，故称为**等倾干涉**
+    ![等倾干涉](\pic/等倾干涉.png)
+    $$\begin{aligned}
+     \delta=2n_2d\cos\gamma+\frac{\lambda}{2}
+    \end{aligned}$$
+
+## 迈克耳孙干涉仪
+  ![迈克耳孙干涉仪](\pic/迈克耳孙干涉仪.png)
+  * 对于观察者来说，光线从M1,M2上的反射相当于来自距离为d的M1，M2'上的反射，其中M2'是平面镜M2经过G1半反半透膜反射所形成的虚像
+  * 显然这是光束的光程差只取决于厚度d，每移动半个波长时，视场就会出现一个级次亮条纹或暗条纹的变化，当从视场中第K次最亮到出现第K+N次最亮时，反射镜M1移动的距离$d=N\frac{\lambda}{2}$
+* 时间相干性
+  实际光源的发光是独立的，随机的，间歇性的，一切实际光源发射的光是一个个的波列，当接连发出的前后两个波列完全没有重叠时，干涉就不可能发生.两光路之间的光程差超过波列长度L就不会再发生干涉，我们称这波列长度为光源所发射光的**相干长度**
+
+***
+# 光的衍射
+***
+## 惠更斯-菲涅尔原理
+* 光的衍射现象
+  当一束光照射到小孔、细缝等尺寸接近光波长的微小障碍物时，光会绕过障碍物并偏离直线传播，在远处屏幕上就会观察到屏幕上出现明暗相间的条纹，称为光的**衍射现象**.
+* 光衍射现象的分类
+  1. 菲涅尔衍射
+     **菲涅尔衍射是近场衍射**，其光源和接受屏到衍射屏的距离有限，或者光源无限远但接受屏到衍射屏距离有限
+  2. 夫琅禾费衍射
+     **夫琅禾费衍射是远场衍射**，其光源和接受屏到衍射屏的距离均无限远，这意味这夫琅禾费衍射中的入射光和衍射光均为平行光
+* 惠更斯原理
+  波面上任一点都可以看做**次波源**，发出**球面次波**，它们的包络面为下一时刻新的波阵面
+* 惠更斯-菲涅尔原理
+  1. 从同一波阵面上各点发出的次波是相干波
+  2. 经过传播，在空间某点相遇时的叠加是相干叠加
+* 菲涅尔积分公式
+  $$\begin{equation}
+  E=\int_S F\cdot k(\phi)\cdot\frac{1}{r}\cos(\Omega t-\frac{2\pi r}{\lambda})\mathrm{dS}
+  \end{equation}$$
+  * 式$(4)$中各个物理量的意义分别是
+    1. F是比例系数
+    2. $k(\phi)$是倾斜因子
+* 菲涅尔-基尔霍夫衍射积分公式
+  基尔霍夫经过严格的电磁理论证明了菲涅尔积分公式的基本正确性，只需要将波前修正为任意形状的封闭曲面即可,并确定了比例系数和倾斜因子表达式
+  $$\begin{equation}
+  E=\oiint_S F\cdot k(\phi)\cdot\frac{1}{r}\cos(\Omega t-\frac{2\pi r}{\lambda})\mathrm{dS}
+  \end{equation}$$
+  $$\begin{equation}
+  F=-\frac{i}{\lambda}=\frac{e^{-i\frac{\pi}{2}}}{\lambda}
+  \end{equation}$$
+  $$\begin{equation}
+  k(\varphi)=\frac{1}{2}(\cos\theta+\cos\theta_0)
+  \end{equation}$$
+  * $\theta_0$为面元法线与实际光源S到次波源Q连线间的夹角，$\theta$为面元法线与次波源Q到接受屏上一点P连线间的夹角
+  * 当波前为球面的情况下，$\theta_0=0$
+
+## 单缝的夫琅禾费衍射
+* 菲涅尔半波带法
+  * 半波带
+    将波面分割成一系列等宽度的窄条，使得相邻窄条对应点发出的光线的光程差为半个波长，这样就形成了**半波带**
+  * 总宽度为a的狭缝，用一束平行单色光垂直狭缝入射，通过狭缝的光会发生衍射，衍射角相同的平行光经过透镜的汇聚作用将聚焦于一点.狭缝间可以分割出的半波带数目为
+  $$\begin{equation}
+  N=\frac{a\sin\varphi}{\frac{\lambda}{2}}
+  \end{equation}$$
+  * 当划分的半波带数目N是奇数时，衍射条纹为亮条纹；当划分的半波带数目N是偶数时，衍射条纹为暗条纹.这是因为两个相邻的相干光之间光程差为半个波长，处于干涉相消状态，因此当划分数目为奇数个时，就会有一条光线无从抵消，因而出现亮条纹
+  $$\begin{cases}
+  a\sin\varphi & = 2k\frac{\lambda}{2} \qquad暗条纹\\
+  a\sin\varphi & = (2k+1)\frac{\lambda}{2} \qquad亮条纹
+  \end{cases}$$
+  * 衍射光强分布
+    ![衍射光强分布](\pic/衍射光强分布.png)
+    * 中央明纹宽度
+      中央明纹宽度定义为正负一级暗纹之间的距离
+    * 当衍射角增大时，衍射级次增加，但明纹光强会减小  
+* 菲涅尔积分法
+  略
+* 单缝衍射光强分布
+  $$\begin{equation}
+  I=I_m(\frac{\sin u}{u})^2 \quad u=\frac{\pi a\sin\theta}{\lambda}
+  \end{equation}$$
+  * 极值点
+    光强分布的极值点满足
+    $$\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{du}}(\frac{\sin u}{u})=0
+    \end{equation}$$
+    $$\begin{equation}
+    u=\tan u
+    \end{equation}$$
+  * 亮条纹角宽度
+    1. 中央主极大角宽度
+       $$\begin{equation}
+       \Delta\theta_0=2\frac{\lambda}{a}
+       \end{equation}$$
+    2. 其他各级角宽度
+       $$\begin{equation}
+       \Delta\theta=\frac{\lambda}{a}
+       \end{equation}$$
+## 夫琅禾费圆孔衍射
+* 夫琅禾费矩孔衍射
+  衍射屏上开有a*b的矩孔，这样的矩孔可以看作是沿y方向的宽度为a的狭缝和沿x方向的宽度为b的狭缝的交集，衍射图样自然也是两个相互垂直的衍射花样的交集
+  * 衍射光强分布
+    $$\begin{equation}
+    I=I_0(\frac{\sin u}{u})^2(\frac{\sin v}{v})^2
+    \end{equation}$$
+    $$\begin{equation}
+    u=\frac{\pi a\sin\theta_1}{\lambda} \quad v=\frac{\pi b\sin\theta_2}{\lambda}
+    \end{equation}$$
+  * $I_0$为入射光几何像点的衍射光强  
+* 夫琅禾费圆孔衍射
+  * 衍射光强分布
+    $$\begin{equation}
+    I=I_0[\frac{2J_1(x)}{x}]^2
+    \end{equation}$$
+  * $I_0$是屏幕中心光强，$J_1(x)$是一阶贝塞尔函数
+  * 衍射图样特点
+    1. 同心圆环，明暗交错
+    2. 中央为亮斑，其能量占据衍射光强总能量的84%，称为**艾里斑**
+    3. 艾里斑的半角宽度为(D为衍射屏上的圆孔直径)
+       $$\begin{equation}
+       \Delta\theta_0=0.61\frac{\lambda}{R}=1.22\frac{\lambda}{D}
+       \end{equation}$$
+    4. 艾里斑半径(f为透镜焦距)
+       $$\begin{equation}
+       \Delta r=1.22\frac{f\lambda}{D}
+       \end{equation}$$  
+
+## 光学仪器的分辨极限
+* 瑞利判据
+  当一个像斑的中心刚好落在另一个像斑边缘时，认为两个像刚好能分辨，**则此时两像斑中心的角距离刚好是艾里斑的半角宽度**
+* **望远镜的最小分辨角**
+  $$\begin{equation}
+  \delta\phi=1.22\frac{\lambda}{D}
+  \end{equation}$$
+  **最小分辨角越小，仪器的分辨本领越强.光学仪器的最小分辨角是由光的衍射效应决定的，是理论极限不可逾越**
+
+***
+# 衍射光栅
+***
+* 狭缝宽度为a,狭缝间距为b，**光栅常数d=a+b**，衍射角为$\varphi$
+* 光栅衍射是**单缝衍射与缝间干涉综合作用的结果**，缝间干涉决定干涉极大的位置(明纹位置)，单缝衍射决定合成光的光强
+* **光栅方程**
+  相邻狭缝发出的光到达屏幕上同一点的光程差为
+  $$\begin{equation}
+  \delta = (a+b)\sin\varphi
+  \end{equation}$$
+  满足下式条件，则屏幕上出现明条纹，即干涉增强
+  $$\begin{equation}
+  (a+b)\sin\varphi=\pm k\lambda
+  \end{equation}$$
+* 主极大条纹
+  满足光栅方程的明条纹称为主极大明纹，其中k=0时的中央明条纹称为零级主极大，其外各级主极大对称分布在中央明条纹两侧
+* **谱线的缺级**
+  * 缺级是指本应该出现主极大明条纹的位置却没有出现主极大明条纹
+  * 这是因为光栅衍射是单缝衍射和缝间干涉的综合作用，谱线缺级正是因为此时单缝衍射为暗纹
+    $$\begin{cases}
+     (a+b)\sin\varphi &=\pm k\lambda \quad 干涉明纹\\
+     a\sin\varphi &=\pm k'\lambda \quad 衍射暗纹
+    \end{cases}$$
+    $$\begin{equation}
+    k=\frac{a+b}{b}k'
+    \end{equation}$$
+  * 满足$(22)$式就会出现谱线缺级  
+* **暗纹条件(缝间暗纹干涉，下面几个方程等价)**
+  $$\begin{equation}
+  N(a+b)\sin\varphi\frac{2\pi}{\lambda}=\pm m\cdot 2\pi \quad (m不能整除N)
+  \end{equation}$$
+
+  $$\begin{equation}
+  N(a+b)\sin\varphi=\pm m\lambda
+  \end{equation}$$
+
+  $$\begin{equation}
+  (a+b)\sin\varphi=\pm(k+\frac{m}{N})\lambda
+  \end{equation}$$
+  * 两个相邻主极大之间存在N-1个暗条纹
+  * 每两个暗纹之间存在一个光强很小的次级大，相邻两个主极大之间有N-2个次级大
+  * 次级大光强很小，两个主极大之间实际形成一片非常暗的背景 
+* **光栅主极大的半角宽**
+  * 主极大两侧暗纹位置决定了主极大明条纹的宽度 
+  * 主极大的半角宽度$\Delta\varphi$等于其最邻近的暗条纹与主极大亮纹间的夹角
+    $$\begin{equation}
+    \sin(\varphi_k+\Delta\varphi)-\sin\varphi_k=\frac{\lambda}{N(a+b)}
+    \end{equation}$$
+    $$\begin{equation}
+    \Delta\varphi=\frac{\lambda}{N(a+b)\cos\varphi_k}
+    \end{equation}$$
+* **光栅衍射的光强分布**
+  $$\begin{equation}
+  I=I_m(\frac{\sin\alpha}{\alpha})^2(\frac{\sin\frac{N\delta}{2}}{\frac{\delta}{2}})^2
+  \end{equation}$$
+  $$\begin{equation}
+  \delta=\frac{2\pi}{\lambda}(a+b)\sin\varphi \quad \alpha=\frac{\pi a\sin\varphi}{\lambda}
+  \end{equation}$$
+* **光栅的色散本领和色分辨本领**
+  * **角色散本领**
+    $$\begin{equation}
+    \mathrm{d}[(a+b)\sin\varphi]=\pm\mathrm{d\lambda}
+    \end{equation}$$
+    $$\begin{equation}
+    D_{\varphi}=\frac{\delta\varphi}{\delta\lambda}=\frac{k}{(a+b)\cos\varphi}
+    \end{equation}$$
+  * **线色散本领**
+    $$\begin{equation}
+    D_l=fD_{\varphi}
+    \end{equation}$$
+  * 光栅的色散本领只反映主极大中心的分离程度
+    1. 当角距离小于半角宽度时，不可分辨
+    2. 当角距离等于半角宽度时，根据瑞利判据，刚好可以分辨
+    3. 当角距离大于半角宽度时，可以分辨

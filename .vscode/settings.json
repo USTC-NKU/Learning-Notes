@@ -1,0 +1,25 @@
+{
+"background.enabled": true,
+"background.useDefault": false,
+"background.customImages":[
+
+
+    "file:///C:/Users/NKU-LFY/Desktop/万圣怡怡.jpg",
+    "file:///C:/Users/NKU-LFY/Desktop/诗怡.jpg",
+    "file:///C:/Users/NKU-LFY/Desktop/怡怡.jpg",
+
+],
+"background.useFront": true,
+"background.style": {
+    "content": "''",
+    "pointer-events": "none",
+    "position": "absolute",
+    "z-index": "99999",
+    "width": "100%",
+    "height": "100%",
+    "background-size": "cover",
+    "background-position": "center",
+    "background-repeat": "no-repeat",
+    "opacity": 0.4,
+}
+}

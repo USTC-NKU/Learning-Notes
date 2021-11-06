@@ -3,7 +3,7 @@ title: Electromagnetic theory of light
 math: true
 tags: Wave optics
 categories: Physics
-data: 2021-10-13 14:32
+date: 2021-10-13 14:32
 ---
 
 ***
